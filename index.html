@@ -55,8 +55,8 @@
       <span class="en-p">Account and messages: your phone number, verification codes, password, contacts, chats and message contents travel only between your device and Telegram's servers and are governed by <a href="https://telegram.org/privacy">Telegram's Privacy Policy</a>. The developer has no access to them.</span></li>
     <li><strong>本地資料</strong>：登入狀態、訊息快取、對話列表與下載的媒體檔案儲存在本應用的裝置沙箱目錄，受系統保護，解除安裝即全部刪除。<br>
       <span class="en-p">Local data: sign-in state, message cache, chat list and downloaded media are stored in the App's protected sandbox on your device and are deleted when the App is uninstalled.</span></li>
-    <li><strong>通話紀錄檔</strong>：語音通話時，通話元件會在本應用沙箱寫入一份連線除錯紀錄（只含連線狀態與網路資訊，不含聲音內容），每通覆寫、不會自動傳送給任何人，解除安裝即刪除。<br>
-      <span class="en-p">Call log file: during a voice call, the calling component writes a connection debug log to the App sandbox (connection state and network information only, no audio). It is overwritten on each call, never sent anywhere automatically, and deleted when the App is uninstalled.</span></li>
+    <li><strong>通話紀錄檔</strong>：通話時，通話元件會在本應用沙箱寫入一份連線除錯紀錄（只含連線狀態與網路資訊，不含聲音或影像內容），每通覆寫、不會自動傳送給任何人，解除安裝即刪除。<br>
+      <span class="en-p">Call log file: during a call, the calling component writes a connection debug log to the App sandbox (connection state and network information only, no audio or video). It is overwritten on each call, never sent anywhere automatically, and deleted when the App is uninstalled.</span></li>
     <li><strong>裝置資訊</strong>：TDLib 連線時會向 Telegram 回報裝置型號與系統版本（作為 Telegram「已登入裝置」清單的顯示用途），這是 Telegram 協定的必要欄位，開發者不另行收集。<br>
       <span class="en-p">Device information: when connecting, TDLib reports the device model and OS version to Telegram so the session appears in your "Active Sessions" list. This is a required field of the Telegram protocol; the developer does not collect it separately.</span></li>
   </ul>
@@ -79,10 +79,11 @@
     <tr><td><code>GET_NETWORK_INFO</code></td><td>顯示連線中 / 離線狀態。<br><span class="en-p">Show connecting / offline status.</span></td></tr>
     <tr><td>通知 / Notifications</td><td>新訊息以系統通知提醒並顯示未讀角標；首次使用時由系統詢問，可隨時在系統設定關閉。<br><span class="en-p">Deliver new-message notifications and an unread badge; requested by the system on first use and can be turned off in system settings at any time.</span></td></tr>
     <tr><td><code>MICROPHONE</code></td><td>只在兩種情況使用：（1）您按下麥克風按鈕錄製語音訊息，錄音存在本應用沙箱，只傳送給您選擇的對話；（2）語音通話進行中，聲音經端對端加密後直接傳給通話對象（經由 Telegram 的中繼伺服器或點對點連線），本應用不錄製也不保存通話內容。第一次使用時由系統詢問，可隨時在系統設定關閉。<br><span class="en-p">Used only in two cases: (1) while you record a voice message after tapping the microphone button — the recording stays in the App sandbox and is sent only to the chat you choose; (2) during a voice call — audio is end-to-end encrypted and sent directly to the other party (through Telegram relay servers or a peer-to-peer connection); the App does not record or store call audio. Requested by the system on first use and can be turned off in system settings at any time.</span></td></tr>
+    <tr><td><code>CAMERA</code></td><td>只在視訊通話中、您開啟鏡頭時使用；畫面經端對端加密後直接傳給通話對象，本應用不錄影也不保存。第一次開鏡頭時由系統詢問，可隨時在系統設定關閉。<br><span class="en-p">Used only during a video call while you have your camera turned on; video is end-to-end encrypted and sent directly to the other party; the App does not record or store it. Requested by the system the first time you turn the camera on and can be turned off in system settings at any time.</span></td></tr>
   </table>
   </div>
-  <p>本應用不申請位置、相機、通訊錄或儲存讀取權限。拍照與錄影透過系統相機（Camera Picker）進行，本應用只取得您拍下並確認的那一張照片或那一段影片；選取相簿照片透過系統圖片選擇器進行，只取得您當下選定的項目。</p>
-  <p class="en-p">The App does not request location, camera, contacts or storage read permissions. Taking photos and videos uses the system camera (Camera Picker), and the App only receives the photo or video you take and confirm. Choosing from your gallery uses the system picker and exposes only the items you select.</p>
+  <p>本應用不申請位置、通訊錄或儲存讀取權限。一般拍照與錄影透過系統相機（Camera Picker）進行，本應用只取得您拍下並確認的那一張照片或那一段影片；選取相簿照片透過系統圖片選擇器進行，只取得您當下選定的項目。</p>
+  <p class="en-p">The App does not request location, contacts or storage read permissions. Taking regular photos and videos uses the system camera (Camera Picker), and the App only receives the photo or video you take and confirm. Choosing from your gallery uses the system picker and exposes only the items you select.</p>
 
   <h2>4. 兒童<span class="en">Children</span></h2>
   <p>本應用不以 13 歲以下兒童為對象。Telegram 服務條款要求使用者年滿 16 歲（部分地區 13 歲）。</p>
