@@ -3,12 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>tgskin 隱私權政策 / Privacy Policy</title>
+<title>謎之茶室 mizusalon 隱私權政策 / Privacy Policy</title>
 <style>
-  :root { --blue:#007DFF; --ink:#1A1A2E; --muted:#6b7280; --line:#e5e7eb; }
+  :root { --blue:#1D6FD8; --ink:#18212B; --muted:#607080; --line:#DCDDEE; --bg:#F1F0FB; --card:#FFFFFF; --note:#ECEBFA; --noteline:#D9D6F5; }
+  @media (prefers-color-scheme: dark) {
+    :root { --blue:#5BA4F5; --ink:#E8EDF2; --muted:#8E9AA8; --line:#2C3540; --bg:#10121C; --card:#1B1F2E; --note:#1E2238; --noteline:#2D3352; }
+  }
   * { box-sizing:border-box; }
   body {
-    margin:0; background:#f6f8fb; color:var(--ink);
+    margin:0; background:var(--bg); color:var(--ink);
     font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC","Microsoft JhengHei",Helvetica,Arial,sans-serif;
     line-height:1.7; -webkit-text-size-adjust:100%;
   }
@@ -16,67 +19,89 @@
   header { padding:28px 0 18px; border-bottom:2px solid var(--blue); margin-bottom:8px; }
   h1 { font-size:26px; margin:0 0 6px; }
   .sub { color:var(--muted); font-size:14px; margin:0; }
-  h2 { font-size:18px; margin:30px 0 8px; color:var(--ink); }
+  h2 { font-size:18px; margin:30px 0 8px; }
   h2 .en { display:block; font-size:13px; color:var(--muted); font-weight:600; }
-  p, li { font-size:15px; }
-  .en-p { color:#4b5563; font-size:14px; }
+  p, li, td, th { font-size:15px; }
+  .en-p { color:var(--muted); font-size:14px; }
   ul { padding-left:20px; }
-  code { background:#eef2f7; padding:1px 6px; border-radius:5px; font-size:13px; }
+  code { background:var(--note); padding:1px 6px; border-radius:5px; font-size:13px; }
   a { color:var(--blue); }
-  .note { background:#eef5ff; border:1px solid #d6e6ff; border-radius:10px; padding:12px 16px; margin:18px 0; font-size:14px; }
+  .note { background:var(--note); border:1px solid var(--noteline); border-radius:10px; padding:12px 16px; margin:18px 0; font-size:14px; }
+  .table-wrap { overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border-radius:10px; overflow:hidden; }
+  th, td { text-align:left; vertical-align:top; padding:10px 12px; border-bottom:1px solid var(--line); }
+  th { font-size:13px; color:var(--muted); font-weight:600; }
+  td:first-child { white-space:nowrap; }
   footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>tgskin 隱私權政策</h1>
-    <p class="sub">Privacy Policy &middot; 生效日期 / Effective date: 2026-06-16</p>
+    <h1>謎之茶室 mizusalon 隱私權政策</h1>
+    <p class="sub">Privacy Policy &middot; 最後更新 / Last updated: 2026-10-25 &middot; 開發者 / Developer: mshwinfo</p>
   </header>
 
   <div class="note">
-    tgskin 並非 Telegram 官方應用，與 Telegram LLC 無關，僅以系統 WebView 載入公開的 Telegram Web 介面，不修改 Telegram 協議或伺服器行為。<br>
-    <span class="en-p">tgskin is not an official Telegram app and is not affiliated with Telegram LLC. It only loads the public Telegram Web interface in a system WebView and does not modify Telegram's protocol or server behavior.</span>
+    謎之茶室 mizusalon 是為 HarmonyOS NEXT 開發的第三方 Telegram 客戶端，並非 Telegram 官方應用，與 Telegram 無隸屬關係，亦未獲其背書。本應用使用 Telegram 官方開放的 TDLib 函式庫與公開 API 與 Telegram 伺服器連線。<br>
+    <span class="en-p">mizusalon is a third-party Telegram client for HarmonyOS NEXT. It is not an official Telegram app and is not affiliated with or endorsed by Telegram. The App connects to Telegram servers using Telegram's official open-source TDLib library and public API.</span>
   </div>
 
   <h2>1. 我們不收集個人資料<span class="en">We do not collect personal data</span></h2>
-  <p>tgskin 本身不收集、不儲存、不上傳任何個人資料或聊天內容。本應用沒有自己的伺服器或後端，也未內建分析、廣告或追蹤 SDK。</p>
-  <p class="en-p">tgskin itself does not collect, store, or upload any personal data or chat content. The app has no server or backend of its own and contains no analytics, advertising, or tracking SDKs.</p>
-
-  <h2>2. 你的 Telegram 資料<span class="en">Your Telegram data</span></h2>
-  <p>你的 Telegram 帳號、訊息、聯絡人等資料，皆由 Telegram 官方 Web 服務（web.telegram.org）直接處理，受 <a href="https://telegram.org/privacy">Telegram 自身的隱私政策</a>約束。tgskin 僅載入該網頁，不攔截、不讀取、不轉存其內容。</p>
-  <p class="en-p">Your Telegram account, messages, and contacts are handled directly by the official Telegram Web service (web.telegram.org) and are governed by <a href="https://telegram.org/privacy">Telegram's own Privacy Policy</a>. tgskin merely loads that page; it does not intercept, read, or relay its contents.</p>
-
-  <h2>3. 本機儲存<span class="en">Local storage</span></h2>
-  <p>為維持 Telegram Web 的登入狀態，系統 WebView 會在你的裝置本機儲存 Telegram Web 所需的 Cookie 與 localStorage，與一般瀏覽器行為相同。這些資料僅存於你的裝置，不會傳送給 tgskin 開發者或任何第三方。你可透過系統設定清除應用資料以移除它們。</p>
-  <p class="en-p">To keep your Telegram Web session signed in, the system WebView stores the cookies and localStorage required by Telegram Web on your device, just like an ordinary browser. This data stays on your device and is never sent to the tgskin developer or any third party. You can remove it by clearing the app's data in system settings.</p>
-
-  <h2>4. 權限<span class="en">Permissions</span></h2>
-  <p>首發版僅申請以下權限：</p>
+  <p><strong>開發者不收集、不接收、不保存任何使用者資料。</strong>本應用沒有任何開發者自有的伺服器。</p>
+  <p class="en-p"><strong>The developer does not collect, receive or store any user data.</strong> The App has no developer-operated servers.</p>
   <ul>
-    <li><code>INTERNET</code>（網路）：載入 Telegram Web 與收發網頁訊息。</li>
-    <li><code>GET_NETWORK_INFO</code>（網路狀態）：偵測連線狀態以顯示載入或異常提示。</li>
+    <li><strong>帳號與訊息</strong>：您的手機號碼、驗證碼、密碼、聯絡人、對話與訊息內容，只在您的裝置與 Telegram 伺服器之間傳輸，依 <a href="https://telegram.org/privacy">Telegram 的隱私權政策</a>處理。開發者無法存取。<br>
+      <span class="en-p">Account and messages: your phone number, verification codes, password, contacts, chats and message contents travel only between your device and Telegram's servers and are governed by <a href="https://telegram.org/privacy">Telegram's Privacy Policy</a>. The developer has no access to them.</span></li>
+    <li><strong>本地資料</strong>：登入狀態、訊息快取、對話列表與下載的媒體檔案儲存在本應用的裝置沙箱目錄，受系統保護，解除安裝即全部刪除。<br>
+      <span class="en-p">Local data: sign-in state, message cache, chat list and downloaded media are stored in the App's protected sandbox on your device and are deleted when the App is uninstalled.</span></li>
+    <li><strong>通話紀錄檔</strong>：語音通話時，通話元件會在本應用沙箱寫入一份連線除錯紀錄（只含連線狀態與網路資訊，不含聲音內容），每通覆寫、不會自動傳送給任何人，解除安裝即刪除。<br>
+      <span class="en-p">Call log file: during a voice call, the calling component writes a connection debug log to the App sandbox (connection state and network information only, no audio). It is overwritten on each call, never sent anywhere automatically, and deleted when the App is uninstalled.</span></li>
+    <li><strong>裝置資訊</strong>：TDLib 連線時會向 Telegram 回報裝置型號與系統版本（作為 Telegram「已登入裝置」清單的顯示用途），這是 Telegram 協定的必要欄位，開發者不另行收集。<br>
+      <span class="en-p">Device information: when connecting, TDLib reports the device model and OS version to Telegram so the session appears in your "Active Sessions" list. This is a required field of the Telegram protocol; the developer does not collect it separately.</span></li>
   </ul>
-  <p>本應用不申請相機、麥克風、定位、通訊錄或讀寫媒體等敏感權限。</p>
-  <p class="en-p">The initial release requests only <code>INTERNET</code> (to load Telegram Web) and <code>GET_NETWORK_INFO</code> (to detect connectivity). It does not request camera, microphone, location, contacts, or media storage permissions.</p>
 
-  <h2>5. 檔案下載<span class="en">File downloads</span></h2>
-  <p>當你主動下載檔案時，檔案會透過系統檔案選擇器儲存到你選擇的位置。下載行為由你發起，檔案不會被上傳至任何伺服器。</p>
-  <p class="en-p">When you choose to download a file, it is saved to a location you select via the system file picker. Downloads are user-initiated and are never uploaded to any server.</p>
+  <h2>2. 第三方服務<span class="en">Third-party services</span></h2>
+  <ul>
+    <li><strong>Telegram</strong>：訊息服務提供者。<span class="en-p">The messaging service provider.</span></li>
+    <li><strong>翻譯服務</strong>：只有在您點選某則訊息的「翻譯」，或您自行在設定中開啟「自動翻譯」時，訊息文字才會送到您選擇的翻譯提供者（預設為「免費自動」：先用 Telegram 官方翻譯，失敗時改用 Google 翻譯；可改為只用其中一個）。自動翻譯預設關閉，只翻譯您正開著的對話中新收到的訊息。<br>
+      <span class="en-p">Translation: message text is sent to the translation provider you selected (by default "Free auto": Telegram's own translation first, falling back to Google Translate; you can pick just one) only when you tap "Translate" on a message, or when you turn on "Auto-translate" in Settings yourself. Auto-translate is off by default and only covers new incoming messages in the chat you have open.</span></li>
+    <li><strong>AppGallery 更新檢查</strong>：本應用會透過華為 AppGallery 的更新服務查詢是否有新版本（啟動後一天最多一次，可在設定中關閉），由華為依其隱私政策處理。<br>
+      <span class="en-p">AppGallery update check: the App asks Huawei AppGallery's update service whether a newer version exists (at most once a day after launch; can be turned off in Settings). Huawei processes this under its own privacy policy.</span></li>
+    <li>本應用<strong>不含</strong>廣告 SDK、分析 SDK 或任何追蹤元件。<span class="en-p">The App contains <strong>no</strong> advertising SDK, analytics SDK or tracking component.</span></li>
+  </ul>
 
-  <h2>6. 兒童隱私<span class="en">Children's privacy</span></h2>
-  <p>本應用不針對兒童設計，亦不收集兒童的任何資料。</p>
-  <p class="en-p">This app is not directed at children and does not knowingly collect data from children.</p>
+  <h2>3. 權限用途<span class="en">Permissions</span></h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>權限 / Permission</th><th>用途 / Purpose</th></tr>
+    <tr><td><code>INTERNET</code></td><td>與 Telegram 伺服器連線收發訊息。<br><span class="en-p">Connect to Telegram servers.</span></td></tr>
+    <tr><td><code>GET_NETWORK_INFO</code></td><td>顯示連線中 / 離線狀態。<br><span class="en-p">Show connecting / offline status.</span></td></tr>
+    <tr><td>通知 / Notifications</td><td>新訊息以系統通知提醒並顯示未讀角標；首次使用時由系統詢問，可隨時在系統設定關閉。<br><span class="en-p">Deliver new-message notifications and an unread badge; requested by the system on first use and can be turned off in system settings at any time.</span></td></tr>
+    <tr><td><code>MICROPHONE</code></td><td>只在兩種情況使用：（1）您按下麥克風按鈕錄製語音訊息，錄音存在本應用沙箱，只傳送給您選擇的對話；（2）語音通話進行中，聲音經端對端加密後直接傳給通話對象（經由 Telegram 的中繼伺服器或點對點連線），本應用不錄製也不保存通話內容。第一次使用時由系統詢問，可隨時在系統設定關閉。<br><span class="en-p">Used only in two cases: (1) while you record a voice message after tapping the microphone button — the recording stays in the App sandbox and is sent only to the chat you choose; (2) during a voice call — audio is end-to-end encrypted and sent directly to the other party (through Telegram relay servers or a peer-to-peer connection); the App does not record or store call audio. Requested by the system on first use and can be turned off in system settings at any time.</span></td></tr>
+  </table>
+  </div>
+  <p>本應用不申請位置、相機、通訊錄或儲存讀取權限。拍照與錄影透過系統相機（Camera Picker）進行，本應用只取得您拍下並確認的那一張照片或那一段影片；選取相簿照片透過系統圖片選擇器進行，只取得您當下選定的項目。</p>
+  <p class="en-p">The App does not request location, camera, contacts or storage read permissions. Taking photos and videos uses the system camera (Camera Picker), and the App only receives the photo or video you take and confirm. Choosing from your gallery uses the system picker and exposes only the items you select.</p>
 
-  <h2>7. 政策變更<span class="en">Changes to this policy</span></h2>
-  <p>本政策如有更新，將於本頁公布並更新上方的生效日期。</p>
-  <p class="en-p">Any updates to this policy will be posted on this page with a revised effective date above.</p>
+  <h2>4. 兒童<span class="en">Children</span></h2>
+  <p>本應用不以 13 歲以下兒童為對象。Telegram 服務條款要求使用者年滿 16 歲（部分地區 13 歲）。</p>
+  <p class="en-p">The App is not directed at children under 13. Telegram's Terms of Service require users to be at least 16 (13 in some regions).</p>
 
-  <h2>8. 聯絡我們<span class="en">Contact</span></h2>
-  <p>官網 / Website：<a href="https://mshw.info">https://mshw.info</a></p>
+  <h2>5. 資料刪除<span class="en">Data deletion</span></h2>
+  <p>在本應用內「登出」會請 Telegram 伺服器終止本裝置的登入階段並清除本地快取；解除安裝本應用會刪除沙箱內全部資料。您的 Telegram 帳號資料由 Telegram 保管，刪除帳號請依 Telegram 官方流程。</p>
+  <p class="en-p">"Log out" inside the App asks Telegram to terminate this device's session and clears the local cache. Uninstalling the App removes all sandbox data. Your Telegram account data is held by Telegram; to delete your account, follow Telegram's official procedure.</p>
+
+  <h2>6. 政策變更<span class="en">Changes to this policy</span></h2>
+  <p>本政策如有變更，會更新上方日期並於應用商店頁面公告。</p>
+  <p class="en-p">If this policy changes, the date above will be updated and a notice posted on the store listing.</p>
+
+  <h2>7. 聯絡我們<span class="en">Contact</span></h2>
+  <p>信箱 / Email：<a href="mailto:mizuhara@mshw.info">mizuhara@mshw.info</a><br>
+     官網 / Website：<a href="https://mshw.info">https://mshw.info</a></p>
 
   <footer>
-    tgskin &middot; HarmonyOS &middot; 本頁為應用隱私權政策，供應用市場審核與使用者查閱。<br>
+    謎之茶室 mizusalon &middot; HarmonyOS NEXT &middot; 本頁為應用隱私權政策，供應用市場審核與使用者查閱。<br>
     This page is the app's privacy policy, provided for app-store review and user reference.
   </footer>
 </div>
